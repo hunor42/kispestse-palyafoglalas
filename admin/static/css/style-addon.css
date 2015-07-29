@@ -1,0 +1,86 @@
+td {
+	vertical-align: middle !important;
+}
+
+#statusbar {
+	display: none;
+}
+.timeline.table {
+	width: auto;
+	max-width: auto;
+}
+.timeline td {
+	width: 140px;
+	min-width: 140px;
+}
+
+.timeline td + td {
+	border-left: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.timetd{
+	cursor: pointer;
+	border: 0px;
+	color: rgba(0,0,0,0.6);
+}
+.timetd.available{
+	background-color: #18bc9c;
+	cursor: pointer !important;
+	color: rgba(255,255,255,0.9);
+}
+.timetd.unavailable{
+	background-color: #e74c3c;
+	color: rgba(255,255,255,0.9);
+}
+.timetd.booked{
+	background-color: #f39c12;
+	color: rgba(255,255,255,0.9);
+}
+.timetd.end{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.timetd .comment{
+	font-size: 12px;
+	opacity: .8;
+}
+.timetd .price{
+	font-size: 12px;
+	opacity: .8;
+}
+.valueinp{
+	width: 60px;
+	text-align: right;
+}
+.timeline_user .timetd{
+	cursor: auto;
+}
+
+.report-users,
+.report-courts {
+	overflow-y: scroll;
+	overflow-x: hidden;
+  	background-color: rgba(255,255,255,0.5);
+  	padding: 0 20px;
+}
+
+.reports-display {
+	border-bottom: 1px dotted #ccc;
+}
+
+.ui-autocomplete {
+	z-index: 1000 !important;
+}
+
+.reports-display .display{
+	border: none;
+}
+
+.dialog {
+	width: 500px;
+}
+
+@media all and (max-width: 600px)  {
+	.dialog {
+		width: 320px;
+	}
+}

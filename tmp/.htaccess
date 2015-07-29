@@ -1,0 +1,33 @@
+AuthType Basic
+AuthName "KispestSE NEW Site"
+AuthUserFile /home/fillter/FiLLteR/Development/kispestse/.htpasswd
+Require valid-user
+
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+	
+	RewriteRule ^$ index.php [L]
+	RewriteRule ^index.php$ index.php [L]
+	RewriteRule ^static/(.*)$ static/$1 [L]
+	RewriteRule ^sitebuild/(.*)$ sitebuild/$1 [L]
+	
+	RewriteRule ^admin/$ index.php?oid=admin [QSA,L]
+	RewriteRule ^admin/([^/]+)/$ index.php?oid=admin&aid=$1 [QSA,L]
+	RewriteRule ^admin/([^/]+)/([^/]+)/$ index.php?oid=admin&aid=$1&a2id=$2 [QSA,L]
+	RewriteRule ^admin/([^/]+)/([^/]+)/([^/]+)/$ index.php?oid=admin&aid=$1&a2id=$2&a3id=$3 [QSA,L]
+	
+	RewriteRule ^reg/$ index.php?oid=reg [QSA,L]
+	RewriteRule ^reg/success/$ index.php?oid=reg&aid=success [QSA,L]
+	RewriteRule ^activate/([^/]+)/$ index.php?oid=activate&key=$1 [QSA,L]
+	RewriteRule ^login/$ index.php?oid=login [QSA,L]
+	RewriteRule ^login/([^/]+)/$ index.php?oid=login&aid=$1 [QSA,L]
+	RewriteRule ^login/([^/]+)/([^/]+)/$ index.php?oid=login&aid=$1&a2id=$2 [QSA,L]
+	RewriteRule ^login/([^/]+)/([^/]+)/([^/]+)/$ index.php?oid=login&aid=$1&a2id=$2&a3id=$3 [QSA,L]
+	RewriteRule ^forgot_password/$ index.php?oid=forgot_password [QSA,L]
+
+	RewriteRule ^timeunits/$ index.php?oid=timeunits [QSA,L]
+
+	RewriteRule ^(.*)$ - [F,L]
+</IfModule>

@@ -1,0 +1,1 @@
+[KispestSE-Admin] Sikeres pályafoglalás

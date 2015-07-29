@@ -1,0 +1,1 @@
+[KispestSE] Sikeres aktiválás
